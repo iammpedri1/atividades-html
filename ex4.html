@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alerta de Manutenção</title>
+  <style>
+    .alerta {
+      background-color: #fff3cd;
+      color: #ffd556;
+      padding: 16px 20px;
+      font-family: Arial, sans-serif;
+    }
+    .btn-entendi {
+      background-color: #f3cf62;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-entendi:hover {
+      background-color: #e0c46f;
+    }
+  </style>
+</head>
+<body>
+  <div id="caixaAlerta" class="alerta">
+    <p>Aviso: O sistema entrará em manutenção amanhã.</p>
+    <button id="btnEntendi" class="btn-entendi">Entendi</button>
+  </div>
+  <script>
+    const caixaAlerta = document.getElementById('caixaAlerta');
+    const btnEntendi = document.getElementById('btnEntendi');
+    btnEntendi.addEventListener('click', function() {
+      caixaAlerta.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

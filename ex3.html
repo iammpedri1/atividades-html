@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified acess</title>
+</head>
+<body>
+    <label>Digite sua idade</label>
+    <input type="number" id="idade" placeholder="Digite sua idade">
+    <button onclick="verificarIdade()">Verified year</button>
+    <p id="mensagem"></p>
+    <script>
+        function verificarIdade() {
+            let idade = Number(document.getElementById('idade').value);
+            if (idade >= 18) {
+                document.getElementById('mensagem').textContent = 'Acesso liberado!!';
+            } else {
+                document.getElementById('mensagem').textContent = 'Acesso negado!!';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <input type="text" id="tarefaInput" placeholder="Digite uma tarefa">
+    <button onclick="adicionar()">Add Tarefa</button>
+    <ul id="listaTarefas"></ul>
+    
+    <script>
+    function adicionar() {
+        var texto = document.getElementById("tarefaInput").value;
+
+        var item = document.createElement("li");
+        item.textContent = texto;
+        document.getElementById("listaTarefas").appendChild(item);
+        document.getElementById("tarefaInput").value = "";
+    } 
+    </script>
+</body>
+</html>
